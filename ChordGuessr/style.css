@@ -17,7 +17,7 @@ body {
 
 header {
     background-color: #1f1f1f;
-    padding: 1rem;
+    padding:1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,4 +71,12 @@ p.MediumDesc {
 p.AdvancedDesc {
     font-size: x-large;
     max-width: 700px;
+}
+
+h1.HomeHeader {
+    font-size: 600%;
+}
+
+.HomeLogin {
+    padding-bottom: 50%;
 }
