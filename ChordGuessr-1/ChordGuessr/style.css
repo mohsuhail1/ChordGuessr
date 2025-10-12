@@ -1,0 +1,110 @@
+/* Reset default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: underline;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+nav a:hover {
+    color: #00ffcc; /* Changing color when user hovers over nav bar */
+}
+
+
+
+
+/* Created classes for each of the headers in the help.html page to color them separately. */
+
+h2.EasyMode {
+    text-decoration: underline;
+    color: greenyellow;
+    font-size:40px;
+    padding-bottom: 12px;
+}
+
+h2.MediumMode {
+    text-decoration: underline;
+    color: orange;
+    font-size:40px;
+    padding-bottom: 12px;
+}
+
+h2.AdvancedMode {
+    text-decoration: underline;
+    color: red;
+    font-size:40px;
+    padding-bottom: 12px;
+}
+
+p.EasyDesc {
+    font-size: x-large;
+    max-width: 700px;
+    padding-bottom:50px;
+}
+
+p.MediumDesc {
+    font-size: x-large;
+    max-width: 700px;
+    padding-bottom:50px;
+}
+
+p.AdvancedDesc {
+    font-size: x-large;
+    max-width: 700px;
+}
+
+h1.HomeHeader {
+    font-size: 600%;
+}
+
+.HomeLogin {
+    padding-bottom: 50%;
+}
+
+h1.HowTo {
+    font-size:350%;
+    padding-bottom:50px;
+}
+
+form.register {
+    display: grid;
+    grid-template-columns:120px 1fr;
+    gap: 10px;
+    align-items: center;
+
+    margin: 1 auto;
+    width: 300px;
+}
+
+label {
+    text-align: center;
+}
+
+input {
+    padding: 6px;
+}
