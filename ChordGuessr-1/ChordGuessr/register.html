@@ -15,22 +15,23 @@
     </nav>
     </header>
     <br>
-    <h1>Create your account:</h1>
-    <form class="register">
-        <label>Username: <input></label>
-        <label>E-mail: <input></label>
-        <label>Create password: <input type="password"></label>
-        <label>Confirm password: <input type="password"></label>
-        <button>Submit</button>
+    <h1 class="registerHeader">Create your account:</h1>
+    <center>
+    <br>
+    <p id="errorMessage" style="color: red; font-weight: bold;"></p>
+    <form id="registerForm">
+        <div class="registerElements">
+        <label>Username: <input type="text" id="username"></label>
+        <label>E-mail: <input type="email" id="email"></label>
+        <label>Create password: <input type="password" id="password"></label>
+        <label>Confirm password: <input type="password" id="confirmpassword"></label>
+        </div>
+        <button type="submit" class="submitButton">Submit</button>
     </form>
+    </center>
 
-
-
-
+<script src="loginregister.js"></script>
 </body>
-
-
-
 
 
 </html>

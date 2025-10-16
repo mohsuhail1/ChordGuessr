@@ -84,6 +84,7 @@ h1.HomeHeader {
 
 .HomeLogin {
     padding-bottom: 50%;
+    font-size: larger;
 }
 
 h1.HowTo {
@@ -91,14 +92,21 @@ h1.HowTo {
     padding-bottom:50px;
 }
 
-form.register {
+.registerHeader {
+    font-size: 350%;
+}
+
+.registerElements {
     display: grid;
-    grid-template-columns:120px 1fr;
+    grid-template-columns:200px 1fr;
     gap: 10px;
     align-items: center;
 
     margin: 1 auto;
     width: 300px;
+    padding-right: 400px;
+    padding-bottom: 50px;
+    padding-top: 100px;
 }
 
 label {
@@ -107,4 +115,50 @@ label {
 
 input {
     padding: 6px;
+}
+
+button.submitButton {
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+    font-family:sans-serif;
+    background-color: rgba(50, 50, 50, 0.5);    
+    color: white;
+    border-radius: 7px;
+    transition: transform 1 ease;
+}
+
+button.submitButton:hover {
+    background-color: rgba(160,150,150,0.7);
+    transform: translate(-2px,-4px);
+    
+}
+
+.loginLabels {
+    display: grid;
+    grid-template-columns:200px 1fr;
+    gap: 10px;
+    align-items: center;
+
+    margin: 1 auto;
+    width: 300px;
+    padding-right: 400px;
+    padding-bottom: 20px;
+
+}
+
+button.loginButton {
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+    font-family:sans-serif;
+    background-color: rgba(50, 50, 50, 0.5);    
+    color: white;
+    border-radius: 7px;
+    transition: transform 1 ease;
+}
+
+button.loginButton:hover {
+    background-color: rgba(160,150,150,0.7);
+    transform: translate(-2px,-4px);
 }

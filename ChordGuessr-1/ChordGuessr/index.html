@@ -16,26 +16,30 @@
     </nav>
     </header>
     <br>
-    <div class="HomeLogin">
         <h1 class="HomeHeader">ChordGuessr</h1>
-        <p>Test your musical knowledge!</p>    
-        <br>
-        <p>Sign in or create an account to get started:</p>
-        <br>
-        <div class="loginForm">
-            <form>
-                <p>Username: <input></p>
-                <p>Password: <input type="password"> </p>
-            </form>
+        <div class="HomeLogin">
+            <p>Test your musical knowledge!</p>    
             <br>
-            <p>Don't have an account? <a href="register.html">Register</a></p>
-            <p>OR</p>
-            <p>Play as a guest</p>
+            <p>Sign in or create an account to get started:</p>
+            <br>
+            <div class="loginForm">
+                <form id="loginForm">
+                    <center>
+                    <div class="loginLabels">
+                    <label>Username: <input type="text" id="loginUsername"></label>
+                    <label>Password: <input type="password" id="loginPassword"></label>
+                    </div>
+                    </center>
+                    <button type="submit" class="loginButton">Login</button>
+                </form>
+                <br>
+                <p>Don't have an account? <a href="register.html">Register</a></p>
+                <p>OR</p>
+                <p>Play as a guest</p>
+            </div>
         </div>
-    </div>
+
+<script src="loginregister.js"></script>
 </body>
-
-
-
 
 </html>
