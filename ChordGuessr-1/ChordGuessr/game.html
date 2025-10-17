@@ -5,7 +5,6 @@
     <title>ChordGuessr - Play</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
     <nav>
@@ -15,6 +14,24 @@
         <a href="help.html">Help</a>
     </nav>
     </header>
-</body>
 
+    <main class="game-container">
+        <h1>Streak: <span id="streak">0</span></h1>
+
+        <div class="difficulty">
+            <button class="difficulty-btn" data-mode="easy">Easy</button>
+            <button class="difficulty-btn" data-mode="medium">Medium</button>
+            <button class="difficulty-btn" data-mode="advanced">Advanced</button>
+        </div>
+
+        <div class="controls">
+            <button class="play-chord-button" id="playChordBtn">Play Chord</button>
+        </div>
+
+        <div id="chord-selection" class="chord-selection">
+            <!-- Handled with JS -->
+        </div>
+    </main>
+<script src="game.js"></script>
+</body>
 </html>

@@ -38,6 +38,7 @@ nav a:hover {
 
 
 
+
 /* Created classes for each of the headers in the help.html page to color them separately. */
 
 h2.EasyMode {
@@ -117,7 +118,7 @@ input {
     padding: 6px;
 }
 
-button.submitButton {
+/* button.submitButton {
     width: 100px;
     height: 30px;
     font-size: larger;
@@ -126,7 +127,7 @@ button.submitButton {
     color: white;
     border-radius: 7px;
     transition: transform 1 ease;
-}
+} */
 
 button.submitButton:hover {
     background-color: rgba(160,150,150,0.7);
@@ -147,7 +148,7 @@ button.submitButton:hover {
 
 }
 
-button.loginButton {
+/* button.loginButton {
     width: 100px;
     height: 30px;
     font-size: larger;
@@ -156,9 +157,71 @@ button.loginButton {
     color: white;
     border-radius: 7px;
     transition: transform 1 ease;
-}
+} */
 
 button.loginButton:hover {
     background-color: rgba(160,150,150,0.7);
     transform: translate(-2px,-4px);
+}
+
+h1.LBHeader {
+    font-size: 380%;
+}
+
+h2.LBEasy {
+    color: greenyellow;
+    font-size: 270%;
+}
+
+h2.LBMedium {
+    color: orange;
+    font-size: 270%;
+}
+
+h2.LBAdvanced {
+    color: red;
+    font-size: 270%;
+}
+
+.LeaderboardTitles {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:450px;
+    margin-top: 40px;
+    padding-left: 70px;
+}
+
+main.game-container {
+    margin-top: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.difficulty-btn:hover {
+    background-color: #333;
+}
+
+.difficulty-btn:active {
+    background-color: #4aa3ff;
+    color:black;
+}
+
+.play-chord-button:active {
+    background-color: #4aa3ff;
+    color:black;
+}
+
+
+.chord-selection {
+    margin-top: 20px;
 }

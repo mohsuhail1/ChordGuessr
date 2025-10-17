@@ -1,4 +1,4 @@
-console.log("js file loaded")
+console.log("js file loaded") // for testing if the javascript file was loaded
 
 document.getElementById("registerForm")?.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -12,6 +12,8 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
     // clear old message
     errorMessage.textContent = "";
 
+    // validating fields
+
     if (!username || !email || !password || !confirmpassword) {
         errorMessage.textContent = "Please fill in all fields.";
         return;
@@ -23,6 +25,8 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
         errorMessage.textContent = "Passwords do not match.";
         return;
     }
+
+    // preparing local storage
 
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
@@ -40,10 +44,12 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
         return;
     }
 
+    // pushing to HTML local storage
+
     users.push({ username, email, password });
     localStorage.setItem("users", JSON.stringify(users));
 
-    // If all checks pass
+    // confirming registration to user
     errorMessage.style.color = "green";
     errorMessage.textContent = "Registration successful!";
 
