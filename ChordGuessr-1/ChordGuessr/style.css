@@ -268,3 +268,23 @@ button {
     color: gold;
     font-size: 1.3rem;
 }
+
+/* placing game UI at the center */
+
+.game-container {
+    display: flex;
+    flex-direction: column;   /* stack elements vertically */
+    justify-content: center;  /* center vertically */
+    align-items: center;      /* center horizontally */
+    min-height: 80vh;         /* take most of the viewport height */
+    gap: 20px;                /* spacing between elements */
+}
+
+.controls,
+.chord-selection,
+.note-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;          /* buttons wrap if too many */
+    gap: 10px;                /* spacing between buttons */
+}
