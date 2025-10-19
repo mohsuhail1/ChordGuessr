@@ -31,11 +31,15 @@
                     </div>
                     </center>
                     <button type="submit" class="loginButton">Login</button>
+                    <div id="login-message"></div>
+                    <br>
+                    <p>Don't have an account? <a href="register.html">Register</a></p>
                 </form>
-                <br>
-                <p>Don't have an account? <a href="register.html">Register</a></p>
-                <p>OR</p>
-                <p>Play as a guest</p>
+                <!-- Logged-in display, this will be hidden until the user is logged in -->
+                <div id="loggedInInfo" style="display:none;">
+                    <p id="loggedInText"></p>
+                    <button id="logoutBtn">Logout</button>
+                </div>
             </div>
         </div>
 

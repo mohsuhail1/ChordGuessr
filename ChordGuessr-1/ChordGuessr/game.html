@@ -16,26 +16,40 @@
     </header>
 
     <main class="game-container">
-        <h1 id="streak">Streak: 0</h1>
+        <!-- message to display if the user clicks "Play" without being logged in -->
+        <div id="guest-message" style="display:none;"></div>
 
-        <!-- <div class="difficulty">
-            <button class="difficulty-btn" data-mode="easy">Easy</button>
-            <button class="difficulty-btn" data-mode="medium">Medium</button>
-            <button class="difficulty-btn" data-mode="advanced">Advanced</button>
-        </div> -->
-
-        <div id="status"></div>
-
-        <div class="controls">
-            <button class="playChordBtn" id="play-btn">Play Chord</button>
+        <div id="difficulty-selection">
+            <h2>Select Difficulty</h2>
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="advanced">Advanced</button>
         </div>
 
-        <div id="chord-selection" class="chord-selection">
-            <!-- Handled with JS -->
+        <!-- giving user options when they get a wrong answer and their streak ends -->
+        <div id="end-streak" style="display:none; text-align:center; margin-top: 15px;">
+            <p id="end-streak-message"></p>
+            <button id="retryBtn">Try Again</button>
+            <button id="saveScoreBtn">Save Score</button>
         </div>
 
-        <div id="note-selection" class="note-selection">
-            <!-- Handled with JS -->
+        <!-- The game UI will be hidden until the user selects a difficulty -->
+        <div id="game-ui" style="display:none;"> 
+            <h1 id="streak">Streak: 0</h1>
+
+            <div id="status"></div>
+
+            <div class="controls">
+                <button class="playChordBtn" id="play-btn">Play Chord</button>
+            </div>
+
+            <div id="chord-selection" class="chord-selection">
+                <!-- Handled with JS -->
+            </div>
+
+            <div id="note-selection" class="note-selection">
+                <!-- Handled with JS -->
+            </div>
         </div>
     </main>
 <script src="game.js"></script>

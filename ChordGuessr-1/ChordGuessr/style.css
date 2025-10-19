@@ -164,6 +164,19 @@ button.loginButton:hover {
     transform: translate(-2px,-4px);
 }
 
+.LeaderboardTitles {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* smaller gap for better centering */
+    margin-top: 40px;
+}
+
+.LeaderboardSection {
+    display: flex;
+    flex-direction: column; /* stack <h2> and <ul> vertically */
+    align-items: center;    /* center content */
+}
+
 h1.LBHeader {
     font-size: 380%;
 }
@@ -186,10 +199,8 @@ h2.LBAdvanced {
 .LeaderboardTitles {
     display:flex;
     justify-content: center;
-    align-items: center;
-    gap:450px;
+    gap:200px;
     margin-top: 40px;
-    padding-left: 70px;
 }
 
 main.game-container {
@@ -224,4 +235,36 @@ button {
 
 .chord-selection {
     margin-top: 20px;
+}
+
+/* for styling leaderboard lists */
+
+.LeaderboardSection ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    width: 150px;
+    text-align: center;
+    border: 2 px solid #ccc;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.LeaderboardSection ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1.1rem;
+}
+
+/* removing bottom border for the last item in lb */
+.LeaderboardSection ul li:last-child {
+    border-bottom: none;
+}
+
+/* highlighting the first place */
+.LeaderboardSection ul li:first-child {
+    font-weight: bold;
+    color: gold;
+    font-size: 1.3rem;
 }

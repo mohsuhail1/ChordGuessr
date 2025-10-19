@@ -1,5 +1,7 @@
 console.log("js file loaded") // for testing if the javascript file was loaded
 
+// register page
+
 document.getElementById("registerForm")?.addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -57,4 +59,73 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
 
 
 
+});
+
+// login page
+
+document.getElementById("loginForm")?.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("loginUsername").value.trim();
+    const password = document.getElementById("loginPassword").value;
+    const loginMessage = document.getElementById("login-message");
+
+    loginMessage.textContent = "";
+    loginMessage.style.color="red";
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(user => user.username === username);
+
+    // invalid username
+    if (!user) {
+        loginMessage.textContent = "User not found.";
+        return;
+    }
+
+    // invalid password
+    if (user.password !== password) {
+        loginMessage.textContent = "Incorrect password.";
+        return;
+    }
+
+    // successful login
+    loginMessage.style.color = "green";
+    loginMessage.textContent = "Login Successful!"
+
+    // saving logged in user
+    localStorage.setItem("loggedInUser", username);
+
+    // redirect to game page
+    setTimeout(() => {
+        window.location.href = "game.html";
+    }, 500); // slight delay 
+
+});
+
+
+// checking if user is logged in
+
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const loginForm = document.getElementById("loginForm");
+    const loggedInInfo = document.getElementById("loggedInInfo");
+    const loggedInText = document.getElementById("loggedInText");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (loggedInUser) {
+        // hiding login form since user is already logged in
+        loginForm.style.display = "none";
+        // show the user who they are currently logged in as
+        loggedInInfo.style.display = "block";
+        loggedInText.textContent = `Logged in as ${loggedInUser}`;
+    }
+
+    // functionality for logout button
+    logoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("loggedInUser");
+        // Show login form after user logs out
+        loginForm.style.display = "block";
+        loggedInInfo.style.display = "none";
+    });
 });
