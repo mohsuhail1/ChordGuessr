@@ -1,5 +1,6 @@
 # ChordGuessr
 **Test your muscial knowledge!**
+*My submission for CST2120 Coursework 1*
 
 * Developed with HTML, CSS and Javascript
 * Uses HTML Local Storage
