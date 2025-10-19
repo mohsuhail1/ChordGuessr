@@ -16,19 +16,25 @@
     </header>
 
     <main class="game-container">
-        <h1>Streak: <span id="streak">0</span></h1>
+        <h1 id="streak">Streak: 0</h1>
 
-        <div class="difficulty">
+        <!-- <div class="difficulty">
             <button class="difficulty-btn" data-mode="easy">Easy</button>
             <button class="difficulty-btn" data-mode="medium">Medium</button>
             <button class="difficulty-btn" data-mode="advanced">Advanced</button>
-        </div>
+        </div> -->
+
+        <div id="status"></div>
 
         <div class="controls">
-            <button class="play-chord-button" id="playChordBtn">Play Chord</button>
+            <button class="playChordBtn" id="play-btn">Play Chord</button>
         </div>
 
         <div id="chord-selection" class="chord-selection">
+            <!-- Handled with JS -->
+        </div>
+
+        <div id="note-selection" class="note-selection">
             <!-- Handled with JS -->
         </div>
     </main>

@@ -7,7 +7,7 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
     const confirmpassword = document.getElementById("confirmpassword").value.trim();
-     const errorMessage = document.getElementById("errorMessage");
+    const errorMessage = document.getElementById("errorMessage");
 
     // clear old message
     errorMessage.textContent = "";
