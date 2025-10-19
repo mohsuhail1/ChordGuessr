@@ -1,5 +1,5 @@
 # ChordGuessr
-**Test your muscial knowledge!**
+**Test your muscial knowledge!**\n
 *My submission for CST2120 Coursework 1*
 
 * Developed with HTML, CSS and Javascript
