@@ -54,11 +54,6 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
     // confirming registration to user
     errorMessage.style.color = "green";
     errorMessage.textContent = "Registration successful!";
-
-    
-
-
-
 });
 
 // login page

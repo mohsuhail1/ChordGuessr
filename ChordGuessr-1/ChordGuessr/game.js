@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         guestMessage.style.fontWeight = "bold";
         guestMessage.style.display = "inline";
 
-
-
         // hiding message after 5 seconds
         setTimeout(() => guestMessage.style.display = 'none', 5000);
     }
@@ -110,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             createButtons(noteSelection, allNotes, "note");
         }
 
-        // creating the function that is being called in lines 31 and 35
+        // creating the function that is being called in lines 104 and 108
         function createButtons(container, items, type) {
             items.forEach(item => {
                 const btn = document.createElement("button");
@@ -121,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
         
         const noteFrequencies = {
+            // these are frequencies of notes from the fourth octave, roughly the middle of the piano
             "C": 261.63,
             "D": 293.66,
             "E": 329.63,
