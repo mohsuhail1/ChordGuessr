@@ -1,5 +1,5 @@
 # ChordGuessr
-**Test your muscial knowledge!**
+**Test your musical knowledge!**
 
 *My submission for CST2120 Coursework 1*
 
