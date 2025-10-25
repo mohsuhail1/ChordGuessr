@@ -38,22 +38,28 @@ nav a:hover {
 
 
 .homeHeader {
+    padding-right: 100px;
     display:flex;
+    height: 250px;
     align-items: center;
-    padding-left: 400px;
+    justify-content: center;
 }
 
 .logo {
-    width:150px;
+    width:160px;
 }
 
-
+.homePhrase {
+    font-size: 200%;
+    font-style: italic;
+    font-weight: bold;
+}
 
 /* Created classes for each of the headers in the help.html page to color them separately. */
 
 h2.EasyMode {
     text-decoration: underline;
-    color: rgb(85, 255, 0);
+    color: #1c5727;
     font-size:40px;
     padding-bottom: 12px;
 }
@@ -170,7 +176,7 @@ h1.LBHeader {
 }
 
 h2.LBEasy {
-    color: greenyellow;
+    color: #1c5727;
     font-size: 270%;
 }
 
