@@ -9,8 +9,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #121212;
-    color: white;
+    background-color: #dfe3ee;
+    color: #1f1f1f;
     text-align: center;
     min-height: 100vh;
 }
@@ -37,27 +37,37 @@ nav a:hover {
 
 
 
+.homeHeader {
+    display:flex;
+    align-items: center;
+    padding-left: 400px;
+}
+
+.logo {
+    width:150px;
+}
+
 
 
 /* Created classes for each of the headers in the help.html page to color them separately. */
 
 h2.EasyMode {
     text-decoration: underline;
-    color: greenyellow;
+    color: rgb(85, 255, 0);
     font-size:40px;
     padding-bottom: 12px;
 }
 
 h2.MediumMode {
     text-decoration: underline;
-    color: orange;
+    color: rgb(255, 145, 0);
     font-size:40px;
     padding-bottom: 12px;
 }
 
 h2.AdvancedMode {
     text-decoration: underline;
-    color: red;
+    color: rgb(255, 44, 44);
     font-size:40px;
     padding-bottom: 12px;
 }

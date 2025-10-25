@@ -20,11 +20,33 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
         errorMessage.textContent = "Please fill in all fields.";
         return;
     }
+    
+    // validating password for minimum 8 characters, capitalization, at least one number
+    function validatePassword(password) {
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){8,}$/;
+        return passwordRegex.test(password);
+    }
+
+    if (!validatePassword(password)) {
+        errorMessage.textContent = "Password must have minimum 8 characters, at least 1 lowercase, 1 uppercase and 1 number."
+        return;
+    }
 
     // checking if passwords match
 
     if (password != confirmpassword) {
         errorMessage.textContent = "Passwords do not match.";
+        return;
+    }
+
+    // validating password for minimum 8 characters, capitalization, at least one number
+    function validatePassword(password) {
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+        return passwordRegex.test(password);
+    }
+
+    if (!validatePassword(password)) {
+        errorMessage.textContent = "Password must have minimum 8 characters, at least 1 lowercase, 1 uppercase and 1 number."
         return;
     }
 
