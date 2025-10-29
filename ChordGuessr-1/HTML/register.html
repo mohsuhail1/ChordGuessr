@@ -21,14 +21,26 @@
     <br>
     <p id="errorMessage" style="color: red; font-weight: bold;"></p>
     <form id="registerForm">
-        <div class="registerElements">
-        <label>Username: <input type="text" id="username"></label>
-        <label>E-mail: <input type="email" id="email"></label>
-        <label>Create password: <input type="password" id="password"></label>
-        <label>Confirm password: <input type="password" id="confirmpassword"></label>
-        </div>
-        <button type="submit" class="submitButton">Submit</button>
-    </form>
+    <div class="registerElements">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email">
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="1">
+        
+        <label for="password">Create password:</label>
+        <input type="password" id="password">
+        
+        <label for="confirmpassword">Confirm password:</label>
+        <input type="password" id="confirmpassword">
+
+    </div>
+    <button type="submit" class="submitButton">Submit</button>
+</form>
     </center>
 
 <script src="../JS/loginregister.js"></script>

@@ -7,6 +7,8 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
 
     const username = document.getElementById("username").value.trim(); // trimming to remove whitespaces
     const email = document.getElementById("email").value.trim();
+    const age = document.getElementById("age").value.trim();
+    
     const password = document.getElementById("password").value.trim();
     const confirmpassword = document.getElementById("confirmpassword").value.trim();
     const errorMessage = document.getElementById("errorMessage");
@@ -15,30 +17,11 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
     errorMessage.textContent = "";
 
     // validating fields
-
-    if (!username || !email || !password || !confirmpassword) {
+    if (!username || !email || !age || !password || !confirmpassword) {
         errorMessage.textContent = "Please fill in all fields.";
         return;
     }
     
-    // validating password for minimum 8 characters, capitalization, at least one number
-    function validatePassword(password) {
-        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d){8,}$/;
-        return passwordRegex.test(password);
-    }
-
-    if (!validatePassword(password)) {
-        errorMessage.textContent = "Password must have minimum 8 characters, at least 1 lowercase, 1 uppercase and 1 number."
-        return;
-    }
-
-    // checking if passwords match
-
-    if (password != confirmpassword) {
-        errorMessage.textContent = "Passwords do not match.";
-        return;
-    }
-
     // validating password for minimum 8 characters, capitalization, at least one number
     function validatePassword(password) {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
@@ -50,8 +33,13 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
         return;
     }
 
-    // preparing local storage
+    // checking if passwords match
+    if (password != confirmpassword) {
+        errorMessage.textContent = "Passwords do not match.";
+        return;
+    }
 
+    // preparing local storage
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
     // checking if email and username already exists
@@ -69,8 +57,7 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
     }
 
     // pushing to HTML local storage
-
-    users.push({ username, email, password });
+    users.push({ username, email, age, password }); 
     localStorage.setItem("users", JSON.stringify(users));
 
     // confirming registration to user
