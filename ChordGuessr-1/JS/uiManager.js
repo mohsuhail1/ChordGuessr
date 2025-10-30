@@ -31,7 +31,7 @@ export class UIManager {
 
     showEndStreak(streak, onAction) {
         this.endStreakMessage.textContent = `Your streak ended at ${streak}`;
-        const loggedInUser = localStorage.getItem("loggedInUser");
+        const loggedInUser = sessionStorage.getItem("loggedInUser");
 
         if (!loggedInUser) {
             this.saveScoreBtn.disabled = true;

@@ -3,7 +3,7 @@ import { Game } from "./gameLogic.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const guestMessage = document.getElementById("guest-message");
-    const loggedInUser = localStorage.getItem("loggedInUser");
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
 
     if (!loggedInUser) {
         // message to inform user if not logged in

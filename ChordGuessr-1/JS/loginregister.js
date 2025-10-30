@@ -21,6 +21,11 @@ document.getElementById("registerForm")?.addEventListener("submit", function(e) 
         errorMessage.textContent = "Please fill in all fields.";
         return;
     }
+
+    if (isNaN(age) || age < 13 || age > 100) {
+        errorMessage.textContent = "User must be aged between 13 and 100 to register.";
+        return;
+    }
     
     // validating password for minimum 8 characters, capitalization, at least one number
     function validatePassword(password) {
@@ -96,8 +101,8 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
     loginMessage.style.color = "green";
     loginMessage.textContent = "Login Successful!"
 
-    // saving logged in user
-    localStorage.setItem("loggedInUser", username);
+    // saving logged in user to session storage
+    sessionStorage.setItem("loggedInUser", username);
 
     // redirect to game page
     setTimeout(() => {
@@ -111,7 +116,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    const loggedInUser = localStorage.getItem("loggedInUser");
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
     const loginForm = document.getElementById("loginForm");
     const loggedInInfo = document.getElementById("loggedInInfo");
     const loggedInText = document.getElementById("loggedInText");
@@ -127,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // functionality for logout button
     logoutBtn.addEventListener("click", () => {
-        localStorage.removeItem("loggedInUser");
+        sessionStorage.removeItem("loggedInUser");
         // Show login form after user logs out
         loginForm.style.display = "block";
         loggedInInfo.style.display = "none";

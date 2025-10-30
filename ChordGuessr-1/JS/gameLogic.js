@@ -63,7 +63,7 @@ export class Game {
             this.ui.updateStatus(`Wrong! It was ${this.currentChord.note} ${this.currentChord.chord}`);
             this.ui.updateStreak(this.streak);
             this.ui.showEndStreak(this.streak, (retry,save) => {
-                const user = localStorage.getItem("loggedInUser");
+                const user = sessionStorage.getItem("loggedInUser");
                 if (save && user) saveScore(this.difficulty, user, finalStreak);
                 this.reset();
                 retry();
